@@ -1,0 +1,233 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+:root{
+    --text-secondary: #6e6e6e;
+    --text-third: #d3d3d3;
+    --primary: #000000;
+    --bg-primary: #ffffff;
+}
+
+body{
+    color: var(--primary);
+    background-color: var(--bg-primary);
+    font-family: 'Questrial', sans-serif;
+}
+hr{
+    border-color: #8b8b8b;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.btn{
+    border-radius: 0;
+    transition: all 0.3s;
+    padding: 10px 0;
+}
+.btn:hover{
+    transform: scale(1.06);
+}
+.container.main-section{
+    padding: 3rem 3rem;
+}
+.breadcrumb-item a{
+    color:  var(--text-secondary);
+    text-decoration: none;
+}
+.breadcrumb-item.active{
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+}
+#item-brand{
+    font-size: 15px;
+    color:  var(--text-secondary);
+}
+.item-price{
+    font-size: 25px;
+    font-weight: 600;
+}
+#item-compare-price{
+    position: relative;
+    margin-left: 10px;
+    font-size: 16px;
+    color:  var(--text-secondary);
+}
+#item-compare-price::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: var(--text-secondary);
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+  } 
+
+h5#item-brand{
+    font-size: 13px;
+}
+#item-title{
+    color: var(--primary);
+    font-weight: 600;
+}
+.item-color-title{
+    color: var(--text-secondary);
+}
+.variants-colors{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.variants-colors input{
+    margin: 0 5px;
+}
+.variants-size {
+    width: 100%;
+}
+.variants-size input{
+    margin: 5px;
+}
+.form-check-input{
+    cursor: pointer;
+    border-radius: 15px !important;
+    border: 2.5px solid transparent;
+    padding: 5px;
+    box-shadow: 0px 0px 0px 1px transparent;
+    transition: all 0.3s;
+}
+#variants-size{
+    display: contents;
+}
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border: 2.5px solid #ffffff;
+    padding: 5px;
+    box-shadow: 0px 0px 0px 1px #00000087;
+}
+.item-size-label {
+    color: var(--text-third);
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff;
+    border: 1px solid var(--text-third);
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.item-size-label:hover{
+    transform: scale(1.04);
+}
+.item-size{
+    display: none;
+}
+.item-size:checked + label{
+    color: var(--bg-primary);
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* input[type="checkbox"]:checked + label {
+    background: brown;
+} */
+
+
+.amount-button{
+    border: 1px solid var(--text-third);
+    display: flex;
+    width: 100px;
+}
+.amount-button #plus,
+.amount-button #minus{
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    transition: all 0.3s;
+}
+.amount-button #plus:hover,
+.amount-button #minus:hover{
+    background-color: var(--text-third);
+}
+.amount-button #numberPlace{
+    border: none;
+    width: 50px;
+    border-radius: 0px;
+}
+.amount-button #numberPlace:focus{
+    border: none;
+    box-shadow: none;
+}
+.total-price {
+    color: var(--text-secondary);
+    font-size: 15px;
+    display: flex;
+    flex-direction: inherit;
+}
+.total-price strong{
+    color: var(--primary);
+}
+.btn-product-secondary{
+    background: #f0f0f0;
+}
+.btn-product-primary{
+    background: var(--primary);
+    color: var(--bg-primary);
+}
+.btn-product-primary:hover{
+    background: var(--primary);
+    color: var(--bg-primary);
+    border: none;
+}
+#item-desc {
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+
+
+@media (max-width: 575.98px) {
+    .total-price {
+        color: var(--text-secondary);
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+@media (min-width: 1200px) {
+    .variants-size input{
+        margin: 0 5px;
+    }
+    .container.main-section{
+        padding: 5rem 1rem;
+    }
+    .variants-size{
+        width: auto;
+        float: none;
+    }
+    .total-price {
+        color: var(--text-secondary);
+        font-size: 15px;
+        display: flex;
+        flex-direction: inherit;
+    }
+}
